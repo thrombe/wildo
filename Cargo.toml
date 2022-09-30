@@ -1,0 +1,38 @@
+[package]
+name = "wildo"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde-aux = "3.0"
+serde_json = "1"
+serde_yaml = "0.8"
+anyhow = "1.0"
+toml = "0.5"
+log = "0.4.17"
+fern = "0.6.1"
+
+tokio = { version = "1.18", features = ["rt-multi-thread", "time", "full", "fs"] }
+tokio-stream = { version="0.1.9", features = ["fs"] }
+futures = "0.3.21"
+
+tui = "0.19"
+crossterm = { version = "0.25", features = ["event-stream"] }
+unicode-width = "0.1.9"
+termion = "1.5.6"
+console = { version = "0.15", default-features = false }
+ansi_colours = "1.0"
+termcolor = "1.1"
+lazy_static = "1.4"
+derivative = "2.2.0"
+once_cell = "1.12.0"
+dirs = "4.0.0"
+typetag = "0.2.0"
+chrono = { version = "0.4.22", features = ["serde"] }
+
+[profile.release]
+incremental = true
+
